@@ -21,7 +21,7 @@ const (
 	dbport = "5432"
 	dbuser = "sadhelx_usr"
 	dbpass = "s4dhelx"
-	dbname = "sdx_usermgmt_db"
+	dbname = "sdx_sertifikasi_db"
 )
 
 func main() {
