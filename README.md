@@ -1,5 +1,4 @@
-# Guideline Service
 
-Backend service to get guidelines information from DB
+# sadhelX-be-guidelines
+Specific BE repository for guidelines module
 
-Test Slack Integration with Github Part 2
