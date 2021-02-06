@@ -1,3 +1,3 @@
-# aph-go-service
+# Guideline Service
 
-Sampe to create your own microservice using GO. In this code, I use Go-Kit as microservice framework.
+Backend service to get guidelines information from DB
