@@ -1,6 +1,9 @@
 package datastruct
 
-import "time"
+import (
+	"context"
+	"time"
+)
 
 type HelloWorldRequest struct {
 	NAME string `json:"name"`
@@ -23,3 +26,18 @@ type userInformation struct {
 	Updated_Date time.Time
 	Updated_By   string
 }
+
+type (
+	// Guidelines view from sdx_sertifikasi_db
+	Guidelines struct {
+		GuidelinesName        string
+		GuidelinesDescription string
+		GuidelinesType        string
+		GuidelinesLink        string
+	}
+
+	// GuidelinesRepository DB action from Guidelines table
+	GuidelinesRepository interface {
+		GetGuidelinesDocument(ctx context.Context) ([]Guidelines, error)
+	}
+)
