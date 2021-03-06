@@ -46,7 +46,7 @@ func makeGetGuidelinesDocument(svc Service) endpoint.Endpoint {
 		if err != nil {
 			return Response{Status: false, Message: err.Error()}, nil
 		}
-		return Response{Status: true, Message: "Data fetched", Data: res}, nil
+		return Response{Status: true, Message: util.MsgGetDocument, Data: res}, nil
 	}
 }
 

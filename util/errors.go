@@ -33,6 +33,7 @@ const (
 	MsgGeneratedPasswordResetCode = "Password reset code has been sent to email"
 	MsgPasswordReset              = "Password has been updated"
 	MsgUpdateAvatar               = "Avatar has been saved"
+	MsgGetDocument                = "Data fetched"
 )
 
 var statusCodeByMsg = map[string]int{
@@ -64,6 +65,8 @@ var statusCodeByMsg = map[string]int{
 	MsgPasswordReset:              http.StatusOK,
 	MsgUpdateAvatar:               http.StatusCreated,
 	MsgVerifyUserEmail:            http.StatusOK,
+
+	MsgGetDocument: http.StatusOK,
 }
 
 func StatusCode(errorstr string) int {

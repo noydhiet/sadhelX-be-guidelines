@@ -22,7 +22,7 @@ func NewRepo(db *sql.DB, logger log.Logger) datastruct.GuidelinesRepository {
 }
 
 const (
-	queryGetGuidelines = "SELECT * FROM vw_active_guidelines"
+	queryGetGuidelines = "SELECT row_number()over() id, * FROM vw_active_guidelines where guidelines_type = 'document'"
 )
 
 func (repo *repo) GetGuidelinesDocument(ctx context.Context) ([]datastruct.Guidelines, error) {
@@ -38,7 +38,13 @@ func (repo *repo) GetGuidelinesDocument(ctx context.Context) ([]datastruct.Guide
 	for rows.Next() {
 		var guideline datastruct.Guidelines
 
-		if err = rows.Scan(&guideline); err != nil {
+		if err = rows.Scan(
+			&guideline.ID,
+			&guideline.GuidelinesName,
+			&guideline.GuidelinesDescription,
+			&guideline.GuidelinesType,
+			&guideline.GuidelinesLink,
+		); err != nil {
 			return nil, err
 		}
 		guidelines = append(guidelines, guideline)

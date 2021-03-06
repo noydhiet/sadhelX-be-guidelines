@@ -37,7 +37,7 @@ func NewConfigurations(logger log.Logger) *Configurations {
 	viper.SetDefault("DB_NAME", "sdx_sertifikasi_db")
 	viper.SetDefault("DB_USER", "sadhelx_usr")
 	viper.SetDefault("DB_PASSWORD", "s4dhelx")
-	viper.SetDefault("DB_PORT", "5433")
+	viper.SetDefault("DB_PORT", "5432")
 	// viper.SetDefault("DB_PORT", "54321")
 
 	configs := &Configurations{

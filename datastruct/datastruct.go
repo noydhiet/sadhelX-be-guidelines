@@ -30,10 +30,11 @@ type userInformation struct {
 type (
 	// Guidelines view from sdx_sertifikasi_db
 	Guidelines struct {
-		GuidelinesName        string
-		GuidelinesDescription string
-		GuidelinesType        string
-		GuidelinesLink        string
+		ID                    int    `json:"id"`
+		GuidelinesName        string `json:"guidelines_name"`
+		GuidelinesDescription string `json:"guidelines_description"`
+		GuidelinesType        string `json:"guidelines_type"`
+		GuidelinesLink        string `json:"guidelines_link"`
 	}
 
 	// GuidelinesRepository DB action from Guidelines table
