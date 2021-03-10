@@ -32,8 +32,8 @@ func NewConfigurations(logger log.Logger) *Configurations {
 
 	// viper.SetDefault("SERVER_ADDRESS", "0.0.0.0:8088")
 	viper.SetDefault("SERVER_PORT", "8089")
-	// viper.SetDefault("DB_HOST", "sadhelx-be-usermgmt_db")
-	viper.SetDefault("DB_HOST", "localhost")
+	viper.SetDefault("DB_HOST", "sadhelx_db")
+	// viper.SetDefault("DB_HOST", "localhost")
 	viper.SetDefault("DB_NAME", "sdx_sertifikasi_db")
 	viper.SetDefault("DB_USER", "sadhelx_usr")
 	viper.SetDefault("DB_PASSWORD", "s4dhelx")
